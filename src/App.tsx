@@ -1,11 +1,9 @@
-
-import RecipeContainer from "./components/RecipeContainer";
+import CardSection from "./components/CardSection";
 
 export default function App() {
   return (
-    <div className="p-2 bg-[#fff] h-full md:w-[90%] mx-auto lg:w-[80%]">
-      <RecipeContainer/>
-      
+    <div className="w-[80%] mx-auto">
+      <CardSection/>
     </div>
   )
 }
