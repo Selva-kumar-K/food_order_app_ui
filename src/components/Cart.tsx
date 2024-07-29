@@ -12,7 +12,7 @@ interface Items {
   name: string;
   category: string;
   price: number;
-  countNumber?: number;
+  countNumber: number;
 }
 
 interface Product {
