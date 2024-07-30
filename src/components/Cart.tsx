@@ -34,9 +34,10 @@ interface Product {
     >
   >;
   setState: React.Dispatch<React.SetStateAction<boolean>>
+  menu? : boolean
 }
 
-export default function Cart({ products, changeCart, setState }: Product) {
+export default function Cart({ products, changeCart, setState , menu}: Product) {
   const [cart, setCart] = useState<Items[]>(products);
 
   let sumOfTotal = 0
@@ -77,11 +78,11 @@ export default function Cart({ products, changeCart, setState }: Product) {
   // console.log(cart);
   return (
     <>
-      <div className="">
+      <div className={`${menu ? "block" : "hidden"} md:block`}>
         {cart.filter((product) => {
           return product.countNumber === 0;
         }).length === 9 ? (
-          <div className="">
+          <div className="mb-6">
             <div className="">
               <h1 className="text-2xl text-[#c52e2e] font-semibold">
                 Your Cart (0)
@@ -140,7 +141,7 @@ export default function Cart({ products, changeCart, setState }: Product) {
               <p className="font-semibold text-xl">${sumOfTotal}</p>
             </div>
 
-            <div className="flex flex-col mt-6">
+            <div className="flex flex-col mt-6 mb-5">
               <button className="bg-red-700/90 text-white rounded-full py-2 hover:bg-red-600" onClick={() => setState(true)}>Confirm Order</button>
             </div>
           </>

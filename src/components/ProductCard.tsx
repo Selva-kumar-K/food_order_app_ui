@@ -32,7 +32,7 @@ interface Product {
 
 export default function ProductCard({ products, setItems }: Product) {
   const [state, setState] = useState(false);
-
+  // const mobile : (string | undefined | boolean)= window.screen.width < 520 && products.image.mobile || window.screen.width > 520 && products.image.desktop
   const handleClick = (e : string) => {
     setItems(prev => prev.map(product => {
         if(product.name === e){
@@ -72,9 +72,9 @@ export default function ProductCard({ products, setItems }: Product) {
     <div className="max-w-md bg-slate-200/20">
       <div className="relative">
         <img
-          src={`${products.image.desktop}`}
+          src={products.image.desktop}
           alt=""
-          className="rounded-xl w-[556px] md:w-[656px]"
+          className={`rounded-xl w-[556px] md:w-[656px]`}
         />
         {!state || products.countNumber === 0?
           <button onClick={() => handleClick(products.name)} className="border border-slate-500/50 rounded-full bg-white text-black flex items-center space-x-2 px-3 py-2 md:px-4 md:py-2 absolute -bottom-5 left-0 right-0 mx-auto w-[140px] md:w-[155px]">
