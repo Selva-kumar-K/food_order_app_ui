@@ -19,7 +19,7 @@ type Products = {
 };
 export default function ConfirmCard({ items, total, setState }: Products) {
   return (
-    <div className="absolute w-[90%] left-0 right-0 top-20 h-fit mx-auto md:w-[40%] xl:w-[30%] bg-white rounded-lg">
+    <div className="absolute w-[90%] left-0 right-0 -top-28 md:top-0 h-fit mx-auto md:w-[40%] xl:w-[30%] bg-white rounded-lg">
       <div className="p-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"

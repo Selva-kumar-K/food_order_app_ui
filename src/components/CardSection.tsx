@@ -32,7 +32,7 @@ export default function CardSection() {
   // console.log(notify)
 
   return (
-    <div className={`${state ? "bg-slate-300/20" : ""}`}>
+    <div className={`${state ? "bg-slate-400/20" : ""}`}>
       <div className="flex justify-between">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-5">
           Desserts
@@ -80,7 +80,7 @@ export default function CardSection() {
 
       <div className="relative">
         <div
-          className={`flex flex-col space-y-5 md:flex-row space-x-10 ${
+          className={`flex flex-col space-y-5 md:flex-row md:space-x-10 ${
             state ? "!pointer-events-none disabled:pointer-events-none" : ""
           }`}
         >

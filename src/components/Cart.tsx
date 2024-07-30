@@ -97,7 +97,7 @@ export default function Cart({ products, changeCart, setState , menu}: Product) 
           </div>
         ) : (
           <>
-            <h1 className="text-2xl text-[#c52e2e] font-semibold">Your Cart ({data_length})</h1>
+            <h1 className={`text-2xl text-[#c52e2e] font-semibold`}>Your Cart ({data_length})</h1>
             <div className="">
               {cart.map((product) => {
                 if (product.countNumber >= 1) {
