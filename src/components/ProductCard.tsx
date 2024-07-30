@@ -76,7 +76,7 @@ export default function ProductCard({ products, setItems }: Product) {
           alt=""
           className="rounded-xl w-[556px] md:w-[656px]"
         />
-        {!state ?
+        {!state || products.countNumber === 0?
           <button onClick={() => handleClick(products.name)} className="border border-slate-500/50 rounded-full bg-white text-black flex items-center space-x-2 px-3 py-2 md:px-4 md:py-2 absolute -bottom-5 left-0 right-0 mx-auto w-[140px] md:w-[155px]">
             <img src={Cart} alt="" className="size-5" />
             <span
