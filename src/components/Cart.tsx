@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import Cake from "/assets/images/illustration-empty-cart.svg";
-import ConfirmCard from "./ConfirmCard";
-
 
 interface Items {
   image: {
